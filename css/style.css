@@ -1,0 +1,611 @@
+/* Estilos generales */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #161815; /* Fondo claro para toda la página */
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    text-align: center; /* Cambia todo el contenido del cuerpo para que esté centrado */
+    padding: 0; /* Asegura que no haya espacio alrededor del cuerpo */
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+p{
+    color: #FFFFFF;
+}
+
+/*CAROUSEL*/
+
+.carousel-item{
+    height: 80vh;
+    min-height: 300px;
+
+
+}
+
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen al contenedor sin distorsionarla */
+}
+.carousel-caption h5{
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+
+}
+
+.carousel-caption p{
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+
+}
+
+
+.carousel-inner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100;
+    top: 0;
+    left: 0;
+    background-color: #24262B;
+    z-index: 1;
+}
+*/
+
+
+.navbar-nav a{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.navbar-dark .navbar-brand{
+    color: #f2f2f2;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+
+@media(max-width: 767px){
+
+    .navbar-nav{
+        text-align: center;
+
+    }
+    .carousel-item{
+        height: 70vh;
+    }
+    .w-100{
+        height: 70vh;
+    }
+    .carousel-caption{
+        bottom: 125px;
+    }
+    .carousel-caption h5{
+        font-size: 17pxs;
+    }
+    .carousel-caption a{
+        padding: 10px 15px;
+    }
+    .carousel-caption p{
+        width: 100%;
+        line-height: 1.5;
+        font-size: 12px;
+    }
+    .about-text{
+        padding-top: 50px;
+    }
+    .card{
+        margin-bottom: 30px;
+    }
+    .section-padding{
+        padding: 50px 0;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+img {
+    border-radius: 10px;/*pone el borde circular la imagen*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+main {
+    padding-top: 70px; /* adjust the value to match the height of your navbar */
+  }
+
+
+
+/* Estilos para las secciones */
+section {
+    padding: 20px;
+   
+    margin: 0;
+    border: none;
+}
+
+.containerTitulo2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .containerTitulo2 p {
+    width: 50%; /* ajusta el ancho del texto */
+  }
+
+
+/* Eliminar bordes de imágenes */
+img {
+    border: none; /* Elimina cualquier borde */
+    display: block; /* Elimina el espacio debajo de la imagen */
+    
+}
+
+
+#titulo1 .imagen-con-titulo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    position: relative; /* Asegura que el cuadrado esté posicionado en relación a la imagen */
+  }
+  
+  #titulo1 .imagen-con-titulo img {
+    max-width: 50%;
+    height: auto;
+  }
+
+  
+
+
+/* Estilos para contenedor de imagen con título */
+
+
+.imagen-con-titulo {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    width: 30%; /* Ajusta el ancho de la imagen con título */
+    margin-right: 20px; /* agrega un margen derecho para separar la imagen del texto */
+  
+}
+
+.imagen-con-titulo img {
+    width: 100%;
+    height: auto;
+    transition: transform .5s ease;
+    object-fit: cover;/* Ajusta la imagen para que se ajuste al tamaño del contenedor */
+}
+
+.imagen-con-titulo:hover img {
+    transform: scale(1.1);
+}
+
+.imagen-con-titulo h1 {
+    font-size: 36px; /* Ajusta el tamaño de la fuente del título h1 */
+    
+    z-index: 1; /* Asegura que el título h1 esté encima del título h3 */
+  }
+  
+  imagen-con-titulo h3 {
+    font-size: 24px; /* Ajusta el tamaño de la fuente del título h3 */
+    top: 10%; /* Ajusta la posición del título h3 */
+    
+  }
+
+.imagen-con-titulo h3, .imagen-con-titulo h2, .imagen-con-titulo h1 {
+    position: absolute; /* Posiciona los títulos dentro del contenedor */
+    color: white; /* Color del texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    padding: 10px; /* Espacio alrededor del texto */
+    border-radius: 5px; /* Esquinas redondeadas */
+    text-align: center; /* Centra el texto */
+    width: 50%; /* Ajusta el ancho del texto */
+    left: 50%; /* Centra horizontalmente */
+    top: 50%;
+    transform: translateX(-50%,-50%); /* Ajuste de posición horizontal */
+    transform: translateY(-50%); /* Ajustamos la posición vertical */
+
+    opacity: 0;
+    transition: opacity .3s ease;
+   
+}
+
+.imagen-con-titulo:hover h1, .imagen-con-titulo:hover h2, .imagen-con-titulo:hover h3 {
+    opacity: 1;
+}
+.imagen-con-titulo h1 {
+    top: 50%; /* Ajusta la posición del h2 */
+    transform: translate(-50%, -50%); 
+}
+
+.imagen-con-titulo h3 {
+    top: 25%; /* Ajusta la posición del h2 */
+    transform: translate(-50%, -50%); /
+}
+
+.imagen-con-titulo h2 {
+    top: 50%; /* Ajusta la posición del h2 */
+    transform: translate(-50%, -50%); /* Centra tanto vertical como horizontalmente */
+    font-size: 24px; /* Ajusta el tamaño de la fuente del título */
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+.imagen-con-titulo p {
+    position: absolute; /* Posiciona el texto dentro del contenedor */
+    bottom: 20px; /* Ajusta la posición del texto */
+    left: 20px; /* Ajusta la posición del texto */
+    font-size: 18px; /* Ajusta el tamaño de la fuente del texto */
+    color: #fff; /* Ajusta el color del texto */
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding: 10px; /* Agrega espacio entre el texto y la imagen */
+    background-color: rgba(0, 0, 0, 0.5); /* Agrega un fondo semitransparente al texto */
+    border-radius: 5px; /* Agrega esquinas redondeadas al texto */
+  }
+  
+
+/* Media queries para ajustar el tamaño de los elementos según el tamaño de la pantalla */
+@media (max-width: 768px) {
+    .imagen-con-titulo {
+       width: 30%; /* Ajusta el ancho de la imagen */
+       height: 30%; /* Ajusta la altura de la imagen */
+     }
+    .imagen-con-titulo img {
+       width: 100%; /* Ajusta el ancho de la imagen */
+       height: 100%; /* Ajusta la altura de la imagen */
+     }
+    .imagen-con-titulo h1,.imagen-con-titulo h2,.imagen-con-titulo h3 {
+       font-size: 12px; /* Ajusta el tamaño de la fuente del título */
+     }
+    .imagen-con-titulo p {
+       font-size: 5px; /* Ajusta el tamaño de la fuente del texto */
+     }
+   }
+
+
+   @media (max-width: 480px) {
+    .imagen-con-titulo {
+       width: 100%; /* Ajusta el ancho de la imagen */
+       height: 100%; /* Ajusta la altura de la imagen */
+     }
+    .imagen-con-titulo img {
+       width: 100%; /* Ajusta el ancho de la imagen */
+       height: 100%; /* Ajusta la altura de la imagen */
+     }
+    .imagen-con-titulo h1,.imagen-con-titulo h2,.imagen-con-titulo h3 {
+       font-size: 14px; /* Ajusta el tamaño de la fuente del título */
+     }
+    .imagen-con-titulo p {
+       font-size: 5px; /* Ajusta el tamaño de la fuente del texto */
+     }
+   }
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* Agrega un espacio entre las imágenes */
+  }
+  
+  .grid img {
+    width: 30%; /* Reduce el ancho de cada imagen para que quepan en la misma fila */
+    margin: 30px; /* Agrega un poco de espacio entre las imágenes */
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  }
+
+/*imagenes segundo texto*/
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.images img {
+    width: calc(25% - 10px);
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+
+
+
+/* nosotros */
+.contenedor-imagen-texto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: flex-start;/* Ajusta los elementos a la derecha */
+    margin-left: 100px; /* Agrega un margen izquierdo de 50px */
+
+}
+
+.contenedor-imagen-texto img {
+    width: 300px; /* Reducimos el ancho de la imagen */
+    height: 200px; /* Reducimos la altura de la imagen */
+    object-fit: cover; /* Hacemos que la imagen se ajuste al tamaño del contenedor */
+    margin-right: 20px; /* Agregamos un margen derecho a la imagen para separarla del texto */
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3)
+    
+}
+
+.texto-imagen {
+    flex: 1; /* Hacemos que el texto ocupe el espacio restante */
+    font-size:15px; /* Ajusta el tamaño del texto */
+    margin-bottom: 20px; /* Ajusta el margen inferior del texto */
+}
+
+.containerTitulo2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.containerTitulo2 p {
+    width: 50%; /* Ajusta el ancho del texto */
+}
+
+.titulo2, .titulo3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    margin-bottom: 50px;
+    text-align:left; /* Ajusta el texto a la derecha */
+}
+
+
+.titulo2 img, .titulo3 img {
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+/*paquetes*/
+/* Add some basic styling to the paquetes section */
+
+#paquetes h2 {
+   
+    color: #337ab7; /* same color as the primary buttons */
+    font-weight: bold;
+    
+}
+
+.card {
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #337ab7;
+    border-color: #337ab7;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #23527c;
+    border-color: #23527c;
+}
+
+
+
+.paquete {
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+}
+
+
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will make the image cover the entire container */
+    z-index: -1;
+}
+/* Add media queries to adjust the layout for different screen sizes */
+@media (max-width: 768px) {
+    .paquete {
+        flex-basis: 60%; /* adjust the width of each paquete for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .paquete {
+        flex-basis: 100%; /* make each paquete full width on very small screens */
+    }
+}
+
+
+/* Footer */
+
+.footer{
+    background-color: #24262B;
+    padding: 80px;
+}
+
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-links{
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-links h4{
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid #00C3FF;
+    padding-bottom: 10px;
+    display:inline-block ;
+}
+
+.footer-links ul li a
+{
+    font-size: 18px;
+    text-decoration: none;
+    color: #BBBBBB;
+    display: block;
+    margin-bottom:15PX ;
+    transition: all.3s ease;
+}
+.footer {
+    background-color: #24262B;
+    padding: 80px;
+    text-align: center; /* Centra el contenido del pie de página */
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra las filas dentro del pie de página */
+}
+
+.footer-links {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-links h4 {
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid #00C3FF;
+    padding-bottom: 10px;
+}
+.footer-links ul {
+    list-style: none; /* Elimina los puntos de lista */
+    padding: 0;
+}
+
+.footer-links ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #BBBBBB;
+    display: block;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.footer-links ul li {
+    color: #FFFFFF;
+    padding-left: 6px;
+}
+
+.social-link a {
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #FFFFFF;
+    transition: all 0.5s ease;
+}
+
+/* Estilos adicionales */
+.footer-links ul li a {
+    font-size: 18px;
+    color: #BBBBBB; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    display: block; /* Display en bloque */
+    margin-bottom: 15px; /* Margen inferior */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+.footer-links ul li a:hover {
+    color: #FFFFFF; /* Color del texto al pasar el ratón */
+}
+
+.social-link a:hover {
+    background-color: #00C3FF; /* Color de fondo al pasar el ratón */
+}
+
+@media (max-width: 991px) {
+    .footer-row {
+        text-align: center; /* Alineación del texto */
+    }
+    .footer-links {
+        width: 100%; /* Ancho completo */
+        margin-bottom: 30px; /* Margen inferior */
+    }
+}
+
+

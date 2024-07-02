@@ -1,0 +1,645 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+main {
+  padding-top: 70px; /* Ajusta el valor para coincidir con la altura de tu barra de navegación */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #161815; /* Fondo claro para toda la página */
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  text-align: center; /* Cambia todo el contenido del cuerpo para que esté centrado */
+  padding: 0; /* Asegura que no haya espacio alrededor del cuerpo */
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+p {
+  color: #FFFFFF;
+}
+
+/*CAROUSEL*/
+.carousel-item {
+  height: 80vh;
+  min-height: 300px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen al contenedor sin distorsionarla */
+}
+
+.carousel-caption h5 {
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+
+.carousel-caption p {
+  width: 60%;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.carousel-inner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100;
+  top: 0;
+  left: 0;
+  background-color: #24262B;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .carousel-item {
+    height: 70vh;
+  }
+  .w-100 {
+    height: 70vh;
+  }
+  .carousel-caption {
+    bottom: 125px;
+  }
+  .carousel-caption h5 {
+    font-size: 17px;
+  }
+  .carousel-caption a {
+    padding: 10px 15px;
+  }
+  .carousel-caption p {
+    width: 100%;
+    line-height: 1.5;
+    font-size: 12px;
+  }
+}
+/* Aquí irían los estilos para los botones */
+.btn {
+  /* Ejemplo de estilo para un botón */
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid #007bff;
+}
+
+/* Media queries para botones */
+@media (max-width: 768px) {
+  .btn {
+    font-size: 14px; /* Ajusta el tamaño de la fuente del botón */
+    padding: 8px 16px; /* Ajusta el padding del botón */
+  }
+}
+@media (max-width: 480px) {
+  .btn {
+    font-size: 12px; /* Ajusta el tamaño de la fuente del botón */
+    padding: 6px 12px; /* Ajusta el padding del botón */
+  }
+}
+img {
+  border-radius: 10px; /*pone el borde circular la imagen*/
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border: none; /* Elimina cualquier borde */
+  display: block; /* Elimina el espacio debajo de la imagen */
+}
+
+.imagen-con-titulo {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 30%; /* Ajusta el ancho de la imagen con título */
+  margin-right: 20px; /* agrega un margen derecho para separar la imagen del texto */
+}
+
+.imagen-con-titulo img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+  object-fit: cover; /* Ajusta la imagen para que se ajuste al tamaño del contenedor */
+}
+
+.imagen-con-titulo:hover img {
+  transform: scale(1.1);
+}
+
+.imagen-con-titulo h1, .imagen-con-titulo h2, .imagen-con-titulo h3 {
+  position: absolute; /* Posiciona los títulos dentro del contenedor */
+  color: white; /* Color del texto */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  padding: 10px; /* Espacio alrededor del texto */
+  border-radius: 5px; /* Esquinas redondeadas */
+  text-align: center; /* Centra el texto */
+  width: 50%; /* Ajusta el ancho del texto */
+  left: 50%; /* Centra horizontalmente */
+  top: 50%;
+  transform: translate(-50%, -50%); /* Ajustamos la posición */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.imagen-con-titulo:hover h1, .imagen-con-titulo:hover h2, .imagen-con-titulo:hover h3 {
+  opacity: 1;
+}
+
+.imagen-con-titulo h1 {
+  top: 20%; /* Ajusta la posición del h1 */
+}
+
+.imagen-con-titulo h2 {
+  top: 40%; /* Ajusta la posición del h2 */
+}
+
+.imagen-con-titulo p {
+  position: absolute; /* Posiciona el texto dentro del contenedor */
+  bottom: 20px; /* Ajusta la posición del texto */
+  left: 20px; /* Ajusta la posición del texto */
+  font-size: 18px; /* Ajusta el tamaño de la fuente del texto */
+  color: #fff; /* Ajusta el color del texto */
+  text-align: left; /* Alinea el texto a la izquierda */
+  padding: 10px; /* Agrega espacio entre el texto y la imagen */
+  background-color: rgba(0, 0, 0, 0.5); /* Agrega un fondo semitransparente al texto */
+  border-radius: 5px; /* Agrega esquinas redondeadas al texto */
+}
+
+/* Media queries para ajustar el tamaño de los elementos según el tamaño de la pantalla */
+@media (max-width: 768px) {
+  .imagen-con-titulo {
+    width: 30%; /* Ajusta el ancho de la imagen */
+    height: 30%; /* Ajusta la altura de la imagen */
+  }
+  .imagen-con-titulo img {
+    width: 100%; /* Ajusta el ancho de la imagen */
+    height: 100%; /* Ajusta la altura de la imagen */
+  }
+  .imagen-con-titulo h1, .imagen-con-titulo h2, .imagen-con-titulo h3 {
+    font-size: 12px; /* Ajusta el tamaño de la fuente del título */
+  }
+  .imagen-con-titulo p {
+    font-size: 5px; /* Ajusta el tamaño de la fuente del texto */
+  }
+}
+@media (max-width: 480px) {
+  .imagen-con-titulo {
+    width: 100%; /* Ajusta el ancho de la imagen */
+    height: 100%; /* Ajusta la altura de la imagen */
+  }
+  .imagen-con-titulo img {
+    width: 100%; /* Ajusta el ancho de la imagen */
+    height: 100%; /* Ajusta la altura de la imagen */
+  }
+  .imagen-con-titulo h1, .imagen-con-titulo h2, .imagen-con-titulo h3 {
+    font-size: 14px; /* Ajusta el tamaño de la fuente del título */
+  }
+  .imagen-con-titulo p {
+    font-size: 5px; /* Ajusta el tamaño de la fuente del texto */
+  }
+}
+img {
+  border-radius: 10px; /* Pone el borde circular la imagen */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+img {
+  border: none; /* Elimina cualquier borde */
+  display: block; /* Elimina el espacio debajo de la imagen */
+}
+
+#titulo1 .imagen-con-titulo {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  position: relative; /* Asegura que el cuadrado esté posicionado en relación a la imagen */
+}
+
+#titulo1 .imagen-con-titulo img {
+  max-width: 50%;
+  height: auto;
+}
+
+#titulo2 .containerTitulo2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#titulo2 .containerTitulo2 p {
+  width: 50%; /* ajusta el ancho del texto */
+}
+
+/* Media queries para la vista de inicio */
+@media (max-width: 768px) {
+  #titulo1 .imagen-con-titulo img {
+    max-width: 75%;
+  }
+  #titulo2 .containerTitulo2 p {
+    width: 100%; /* ajusta el ancho del texto */
+  }
+}
+@media (max-width: 480px) {
+  #titulo1 .imagen-con-titulo img {
+    max-width: 100%;
+  }
+}
+/* Estilos CSS */
+.contenedor-imagen-texto {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: flex-start; /* Ajusta los elementos a la izquierda */
+  padding: 0 20px; /* Añade relleno a los lados */
+}
+
+.contenedor-imagen-texto img {
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+  max-width: 300px; /* Ancho máximo de la imagen */
+  height: auto; /* Altura automática para mantener la proporción */
+  object-fit: cover; /* Hacemos que la imagen se ajuste al tamaño del contenedor */
+  margin-right: 20px; /* Espacio a la derecha de la imagen */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px; /* Espacio entre imágenes */
+}
+
+.texto-imagen {
+  flex: 1; /* Hacemos que el texto ocupe el espacio restante */
+  font-size: 15px; /* Tamaño de fuente del texto */
+  margin-bottom: 20px; /* Espacio inferior del texto */
+}
+
+.containerTitulo2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerTitulo2 p {
+  width: 100%; /* El texto ocupa todo el ancho disponible */
+  max-width: 500px; /* Ancho máximo del texto */
+}
+
+.titulo2,
+.titulo3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  margin-bottom: 50px;
+  text-align: left; /* Alineación del texto a la izquierda */
+}
+
+.titulo2 img,
+.titulo3 img {
+  margin-bottom: 20px; /* Espacio entre imágenes */
+}
+
+/* Media queries para ajustes responsive */
+@media (max-width: 992px) {
+  .contenedor-imagen-texto {
+    flex-direction: column; /* Cambia a columnas en pantallas más pequeñas */
+    align-items: flex-start; /* Alinea los elementos a la izquierda */
+  }
+  .contenedor-imagen-texto img {
+    max-width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    margin-right: 0; /* Elimina el margen derecho en pantallas más pequeñas */
+    margin-bottom: 20px; /* Espacio entre imágenes */
+  }
+  .containerTitulo2 p {
+    width: 100%; /* El texto ocupa todo el ancho disponible */
+    max-width: 100%; /* Ancho máximo del texto */
+  }
+}
+@media (max-width: 768px) {
+  .contenedor-imagen-texto {
+    margin-left: 0; /* Elimina el margen izquierdo en pantallas más pequeñas */
+  }
+}
+/*paquetes*/
+/* Add some basic styling to the paquetes section */
+#paquetes h2 {
+  color: #337ab7; /* same color as the primary buttons */
+  font-weight: bold;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: #337ab7;
+  border-color: #337ab7;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #23527c;
+  border-color: #23527c;
+}
+
+.paquete {
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This will make the image cover the entire container */
+  z-index: -1;
+}
+
+/* Add media queries to adjust the layout for different screen sizes */
+@media (max-width: 768px) {
+  .paquete {
+    flex-basis: 60%; /* adjust the width of each paquete for smaller screens */
+  }
+}
+@media (max-width: 480px) {
+  .paquete {
+    flex-basis: 100%; /* make each paquete full width on very small screens */
+  }
+}
+
+
+
+
+
+.row{
+  display: flex;
+  padding: 5px;
+  flex-wrap: wrap;
+}
+
+.column{
+ flex: 25%;
+ padding: 5px;
+}
+.column img{
+  margin-top: 5px;
+}
+
+@media(max-width : 600px)
+{
+  .column{
+      flex: 100%;
+  }
+}
+
+
+@media(max-width : 800px)
+{
+  .column{
+      flex: 50%;
+  }
+}
+
+
+
+.navbar-nav a {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.navbar-dark .navbar-brand {
+  color: #f2f2f2;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.navbar {
+  background-color: #343a40;
+}
+.navbar .navbar-brand {
+  color: white;
+}
+.navbar .navbar-brand .text-prima {
+  color: #007bff;
+}
+.navbar .nav-link {
+  color: white;
+}
+.navbar .nav-link:hover {
+  color: #007bff;
+}
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .navbar .navbar-brand {
+    font-size: 16px;
+  }
+  .navbar .nav-link {
+    font-size: 12px;
+  }
+}
+/* Estilos para las secciones */
+section {
+  padding: 20px;
+  margin: 0;
+  border: none;
+}
+
+.footer {
+  background-color: #24262B;
+  padding: 80px;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-links h4 {
+  font-size: 20px;
+  color: #FFFFFF;
+  margin-bottom: 25px;
+  font-weight: 500;
+  border-bottom: 2px solid #00C3FF;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.footer-links ul li a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #BBBBBB;
+  display: block;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.footer {
+  background-color: #24262B;
+  padding: 80px;
+  text-align: center; /* Centra el contenido del pie de página */
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centra las filas dentro del pie de página */
+}
+
+.footer-links {
+  width: 25%;
+  padding: 0 15px;
+}
+
+.footer-links h4 {
+  font-size: 20px;
+  color: #FFFFFF;
+  margin-bottom: 25px;
+  font-weight: 500;
+  border-bottom: 2px solid #00C3FF;
+  padding-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none; /* Elimina los puntos de lista */
+  padding: 0;
+}
+
+.footer-links ul li a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #BBBBBB;
+  display: block;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.footer-links ul li {
+  color: #FFFFFF;
+  padding-left: 6px;
+}
+
+.social-link a {
+  display: inline-block;
+  min-height: 40px;
+  width: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  transition: all 0.5s ease;
+}
+
+/* Estilos adicionales */
+.footer-links ul li a {
+  font-size: 18px;
+  color: #BBBBBB; /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
+  display: block; /* Display en bloque */
+  margin-bottom: 15px; /* Margen inferior */
+  transition: all 0.3s ease; /* Transición suave */
+}
+
+.footer-links ul li a:hover {
+  color: #FFFFFF; /* Color del texto al pasar el ratón */
+}
+
+.social-link a:hover {
+  background-color: #00C3FF; /* Color de fondo al pasar el ratón */
+}
+
+@media (max-width: 991px) {
+  .footer-row {
+    text-align: center; /* Alineación del texto */
+  }
+  .footer-links {
+    width: 100%; /* Ancho completo */
+    margin-bottom: 30px; /* Margen inferior */
+  }
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px; /* Agrega un espacio entre las imágenes */
+}
+
+.grid img {
+  width: 30%; /* Reduce el ancho de cada imagen para que quepan en la misma fila */
+  margin: 30px; /* Agrega un poco de espacio entre las imágenes */
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Media queries para la grilla */
+@media (max-width: 768px) {
+  .grid img {
+    width: 45%; /* Ajusta el ancho de las imágenes */
+    margin: 20px; /* Ajusta el margen entre las imágenes */
+  }
+}
+@media (max-width: 480px) {
+  .grid img {
+    width: 100%; /* Ajusta el ancho de las imágenes */
+    margin: 10px; /* Ajusta el margen entre las imágenes */
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
