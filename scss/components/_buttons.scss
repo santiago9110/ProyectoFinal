@@ -1,0 +1,39 @@
+// components/_buttons.scss
+
+/* Aquí irían los estilos para los botones */
+//index
+.btn {
+    /* Ejemplo de estilo para un botón */
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #007bff;
+}
+
+/* Media queries para botones */
+@media (max-width: 768px) {
+    .btn {
+        font-size: 14px; /* Ajusta el tamaño de la fuente del botón */
+        padding: 8px 16px; /* Ajusta el padding del botón */
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        font-size: 12px; /* Ajusta el tamaño de la fuente del botón */
+        padding: 6px 12px; /* Ajusta el padding del botón */
+    }
+}

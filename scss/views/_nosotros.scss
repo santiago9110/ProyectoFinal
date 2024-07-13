@@ -1,0 +1,97 @@
+/* Estilos CSS */
+.contenedor-imagen-texto {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: flex-start; /* Ajusta los elementos a la izquierda */
+    padding: 0 20px; /* Añade relleno a los lados */
+}
+
+.contenedor-imagen-texto img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    max-width: 300px; /* Ancho máximo de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+    object-fit: cover; /* Hacemos que la imagen se ajuste al tamaño del contenedor */
+    margin-right: 20px; /* Espacio a la derecha de la imagen */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px; /* Espacio entre imágenes */
+}
+
+.texto-imagen {
+    flex: 1; /* Hacemos que el texto ocupe el espacio restante */
+    font-size: 15px; /* Tamaño de fuente del texto */
+    margin-bottom: 20px; /* Espacio inferior del texto */
+}
+
+.containerTitulo2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerTitulo2 p {
+    width: 100%; /* El texto ocupa todo el ancho disponible */
+    max-width: 500px; /* Ancho máximo del texto */
+}
+
+.titulo2,
+.titulo3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    margin-bottom: 50px;
+    text-align: left; /* Alineación del texto a la izquierda */
+}
+
+.titulo2 img,
+.titulo3 img {
+    margin-bottom: 20px; /* Espacio entre imágenes */
+}
+
+/* Media queries para ajustes responsive */
+@media (max-width: 992px) {
+    .contenedor-imagen-texto {
+        flex-direction: column; /* Cambia a columnas en pantallas más pequeñas */
+        align-items: flex-start; /* Alinea los elementos a la izquierda */
+    }
+
+    .contenedor-imagen-texto img {
+        max-width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+        margin-right: 0; /* Elimina el margen derecho en pantallas más pequeñas */
+        margin-bottom: 20px; /* Espacio entre imágenes */
+    }
+
+    .containerTitulo2 p {
+        width: 100%; /* El texto ocupa todo el ancho disponible */
+        max-width: 100%; /* Ancho máximo del texto */
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor-imagen-texto {
+        margin-left: 0; /* Elimina el margen izquierdo en pantallas más pequeñas */
+    }
+}
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.contenedor-imagen-texto {
+    opacity: 0; /* Escondemos inicialmente */
+    animation: slideInLeft 1s ease-out forwards; /*  la animación */
+    &:nth-child(2) {
+        animation-delay: 0.5s; /*  delay para la segunda imagen */
+    }
+}

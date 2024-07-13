@@ -1,0 +1,27 @@
+
+@import 'base/main';
+@import 'base/reset';
+@import 'base/typo';
+
+@import 'components/carousel';
+@import 'components/buttons';
+@import 'components/images';
+
+
+
+@import 'utilities/utilities';
+
+
+
+@import 'views/index';
+@import'views/nosotros';
+@import'views/paquetes';
+@import'views/gallery';
+
+
+
+@import 'layout/navbar';
+@import 'layout/sections';
+@import 'layout/footer';
+
+@import'layout/grid'
